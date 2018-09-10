@@ -1,5 +1,6 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
 
 target 'flix_app' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -8,10 +9,12 @@ target 'flix_app' do
   # Pods for flix_app
   # This pulls in the latest version of Alamofire >= 4.4 but less than 5.0.
 
-  pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.3'
   # Add additional dependencies
-  pod 'OAuthSwift', '~> 1.1.0'
+  pod 'OAuthSwift', '~> 1.2.0'
   pod 'OAuthSwiftAlamofire'
+
 
   target 'flix_appTests' do
     inherit! :search_paths
