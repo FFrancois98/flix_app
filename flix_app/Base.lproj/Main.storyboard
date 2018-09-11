@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2471" y="-1337"/>
+            <point key="canvasLocation" x="-4161" y="-2172"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="CBq-2l-1Rt">
@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1Z-Nc-Riy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1711" y="-1338"/>
+            <point key="canvasLocation" x="-3401" y="-2173"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="mNy-d8-SGm">
@@ -153,7 +153,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Plj-1y-XUm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3412" y="-1337"/>
+            <point key="canvasLocation" x="-5102" y="-2172"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="o0k-It-SP6">
@@ -161,6 +161,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="QHs-5V-yvo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gAz-9S-Vpk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -171,23 +172,58 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XW4-Dc-w7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4351" y="-1337"/>
+            <point key="canvasLocation" x="-6041" y="-2172"/>
         </scene>
-        <!--View Controller-->
+        <!--Superhero View Controller-->
         <scene sceneID="qvI-pz-G9N">
             <objects>
-                <viewController id="BH5-Ja-0qT" sceneMemberID="viewController">
+                <viewController id="BH5-Ja-0qT" customClass="SuperheroViewController" customModule="flix_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bam-E3-jPG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SBb-Sr-ncQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="R9e-BT-DcI">
+                                    <size key="itemSize" width="140" height="206"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PosterCell" id="rx4-EQ-5WR" customClass="PosterCell" customModule="flix_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="206"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="140" height="206"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ala-Cf-zk4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="140" height="206"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="posterImageView" destination="ala-Cf-zk4" id="bMk-Gr-Do5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cu8-wT-c1b"/>
                     </view>
                     <navigationItem key="navigationItem" id="ibp-PH-f1C"/>
+                    <connections>
+                        <outlet property="collectionView" destination="SBb-Sr-ncQ" id="WKG-FH-lp2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A49-6t-Cva" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3412" y="-644.52773613193403"/>
+            <point key="canvasLocation" x="-5103.1999999999998" y="-1479.3103448275863"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="Go0-73-2i0">
@@ -206,7 +242,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLj-3b-naW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4351.1999999999998" y="-644.52773613193403"/>
+            <point key="canvasLocation" x="-6041" y="-1479"/>
         </scene>
     </scenes>
     <resources>
