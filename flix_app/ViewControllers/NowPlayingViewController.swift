@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class NowPlayingViewController: UIViewController, UITableViewDataSource {
+class NowPlayingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     var refreshControl: UIRefreshControl!
@@ -36,7 +36,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         tableView.rowHeight = 250
-        
         
         fetchMovies()
         
