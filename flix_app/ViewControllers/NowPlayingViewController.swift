@@ -35,7 +35,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource, UITable
         
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
-        tableView.rowHeight = 250
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
         
         fetchMovies()
         
